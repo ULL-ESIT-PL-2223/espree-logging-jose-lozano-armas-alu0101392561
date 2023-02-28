@@ -8,9 +8,21 @@ export async function transpile(inputFile, outputFile) {
 }
 
 export function addLogging(code) {
-  // Fill in the code here
+  var ast = espree.parse(code);
+  estraverse.traverse(ast, {
+    enter: function(node, parent) {
+      if (node.type === 'FunctionDeclaration' ||
+          node.type === 'FunctionExpression') {
+            addBeforeCode(node);
+          }
+      }
+    });
+  return escodegen.generate(ast);
 }
 
 function addBeforeCode(node) {
- // Fill in the code here
+  var name = node.id ? node.id.name : '<anonymous function>';
+  var beforeCode = "console.log('Entering " + name + "()');";
+  var beforeNodes = espree.parse(beforeCode).body;
+  node.body.body = beforeNodes.concat(node.body.body);
 }
