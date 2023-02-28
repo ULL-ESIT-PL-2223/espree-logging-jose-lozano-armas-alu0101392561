@@ -25,4 +25,5 @@ function addBeforeCode(node) {
   var beforeCode = "console.log('Entering " + name + "()');";
   var beforeNodes = espree.parse(beforeCode).body;
   node.body.body = beforeNodes.concat(node.body.body);
+  
 }
