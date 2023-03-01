@@ -58,6 +58,11 @@ Se puede llegar a activar algunas opciones para complementar al programa princip
 
 *Opción -h*
 Esta opción sirve para ver que posibles acciones puede tomar el programa, tal y cómo se ve en la siguiente captura:
+![captura_h](docs/captura_h_commander.png)
+
+*Opción -V*
+Esta opción se usa para devolver la versión del programa tal cómo se puede ver en la siguiente captura:
+![captura_V](docs/captura_v_commander.png)
 
 ## Reto 1: Soportar funciones flecha
 
