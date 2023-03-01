@@ -20,7 +20,8 @@ function removeSpaces(s) {
 }
 
 for (let i = 0; i < Test.length; i++) {
-  // Write your tests here   
+  it(`transpile(${Tst[i].input}, ${Tst[i].output})`, async () => {
+  });
 }
 
 

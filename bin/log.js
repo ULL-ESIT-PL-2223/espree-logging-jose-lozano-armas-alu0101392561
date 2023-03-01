@@ -13,5 +13,4 @@ program
   .action((filename, options) => {
     transpile(filename, options.output);
   });
-
 program.parse(process.argv);
