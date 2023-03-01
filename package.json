@@ -7,7 +7,7 @@
         "funlog": "bin/log.js"
     },
     "scripts": {
-        "test": "npm run build; mocha",
+        "test": "mocha",
         "mmt": "npm run build; ./bin/log.js",
         "build": "jison src/maxmin-ast.jison src/maxmin.l -o src/maxmin.js",
         "cov": "nyc npm run test"

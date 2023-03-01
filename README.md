@@ -143,5 +143,5 @@ Cómo vemos en la función lo que se hace es distinguir entre una función con i
 Seguido a esto se muestran una serie de variables que lo que hacen es intersectar los distintos nombres que se almacenaron anteriormente, para luego imprimirlos junto con su número de línea. Para que toda esa información sea trasmitida a la anteriormente mencionada addLogging
 
 ## Tests and Covering
+De cara a los test existen una serie de scripts para ejecutar los mismos tal y cómo se puede ver en el siguiente ejemplo:
 
-...
