@@ -124,16 +124,23 @@ function addBeforeCode(node) {
 }
 ```
 Este código explicado de manera resumida cuenta con 3 funciones.
+
 *Función transpile:* 
 El objetivo de esta función es muy simple. La función transpile recibe un fichero de entrada y otro de salida. Lee el fichero de entrada, el cual procesa baja el estandar de utf-8 y es enviado a la función addLogging, la cual se explicará más adelante y luego simplemente se imprime en el fichero de salida especificado para la misma
 
 *Función addLogging:*
-Está función recibe un 
+Está función recibe un código y lo que es llamar a espree para traducirlo. Espree llama a parse para activar su traducción que en este caso se pasa a ecmaVersion 12, para luego mediante el método traverse introducirse en el árbol y analizar el tipo de función que se está buscando.
 
+Es en este apartado donde podemos ver la búsquedas de las Arrow Functions y de cómo este las analiza pasandoselas a la función addBeforeCode, para que esta actue en base a lo que explicaremos más adelante y luego retorne el árbol de generación que nos da escodegen.
 
 ## Reto 2: Añadir el número de línea
 
-...
+*Función addBeforeCode:* 
+Partiendo del código anterior solo nos queda por mencionar addBeforeCode, es en esta función donde se añade el contar la línea.
+
+Cómo vemos en la función lo que se hace es distinguir entre una función con id, o una función anónima (arrow function) y se declara una variable la cual se usará para almacenar los nombres de las mismas.
+
+Seguido a esto se muestran una serie de variables que lo que hacen es intersectar los distintos nombres que se almacenaron anteriormente, para luego imprimirlos junto con su número de línea. Para que toda esa información sea trasmitida a la anteriormente mencionada addLogging
 
 ## Tests and Covering
 
