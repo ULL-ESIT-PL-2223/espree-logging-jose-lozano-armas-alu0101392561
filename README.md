@@ -147,4 +147,4 @@ De cara a los test existen una serie de scripts para ejecutar los mismos tal y c
 
 ![captura_test](docs/captura_test.png)
 
-Así mismo también se ha hecho un estudio encubierto de las pruebas
+Así mismo también se ha hecho un estudio encubierto de las pruebas:
