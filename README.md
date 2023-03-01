@@ -145,3 +145,4 @@ Seguido a esto se muestran una serie de variables que lo que hacen es intersecta
 ## Tests and Covering
 De cara a los test existen una serie de scripts para ejecutar los mismos tal y cómo se puede ver en el siguiente ejemplo:
 
+![captura_test](docs/captura_test.png)
